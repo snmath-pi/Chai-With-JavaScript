@@ -36,3 +36,8 @@ let yNumber = 33;
 let dola = String(yNumber);
 console.log(dola);
 console.log(typeof(dola));
+
+
+
+// Operations 
+
