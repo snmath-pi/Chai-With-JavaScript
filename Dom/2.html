@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Dom 2</title>
+    <style>
+        .bgblack {
+            background-color: black;
+            color:#fff;
+        }
+    </style>
+</head>
+<body class="bgblack">
+    <div>
+        <h1 style = "color: red" id = "title" class="heading">
+            DOM
+        </h1>
+        <h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, eaque!</p></h2>
+        <h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vero impedit ad qui ducimus maxime ut aliquid corrupti molestiae laboriosam!</p></h3>
+        <input type="password">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, quae ullam ea dignissimos laborum debitis!</p>
+        <ul>
+            <li>
+                one
+            </li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <!-- 1. pehli cheez document.getElementById() 
+        iske andar jo bhi id hai usse us tag ka sarra info(pura value) ayega -->
+        <!-- 2.  document.getElementById().id -> ye id de dega bas -->
+        <!-- 3.  document.getElementById().class/classname -> ye classname dega de dega bas -->
+        <!-- 4. document.getElementById().getAttribute('id' / 'class') -> attribute de dega (title/heading) -->
+        <!-- 5. document.getElementById('title').setAttribute('class', 'test') -->
+        <!-- 6. const title = document.getElementById('title');
+                title.style.backgroundColor = 'green';
+                title.style.padding = '20px';
+                title.style.borderRadius = '15px';
+                and so on we can add styles
+
+            7.  title.textContent (iske andar sarra values milenge evne if they are hidden in the webpage)
+                title.innerText (this shows only visible content)
+                title.innerHTML (gives everything inside the text including all the tags that are within the content)
+            
+
+            8.  document.getElementsByClassName('heading'); // isme 's' ata hai ek extra
+            9.  document.querySelector('h1');// page ka first h1 de dega
+            10. document.querySelector('#tile'); // can select the id just like css
+            11. document.querySelector('.heading') // can also select class like this
+            12. document.querySelector('input[type=password]'); 
+            13. 
+                document.querySelector('ul');
+                const value = document.querySelector('ul'); 
+                const val = document.querySelector('li');
+                val.style.backgroundColor = 'green';
+
+            14. const val = document.querySelectorAll('li');
+                // gives an array of all elements
+                val[0].style.color = 'green';
+                for(let i = 0; i < 3; i++) val[i].style.color = 'red';
+
+
+
+
+         -->
+    </div>
+</body>
+</html>
