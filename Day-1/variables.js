@@ -8,8 +8,9 @@ console.log(accountId);
 accountEmail = "hc@hc.com";
 accountPassword = "2022";
 accountCity = "Banglore";
-
+let accountState;
 /*
 Prefer not to use var: because of issue in block scope and functional scope
 */
-console.table([accountId, accountEmail, accountCity]);
+console.table([accountId, accountEmail, accountCity, accountState]);
+// if a variable is decalred without any value inside by default it's undefined
