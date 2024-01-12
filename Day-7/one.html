@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #000000; color: aliceblue">
+    <h2>Amazing image</h2>
+        <div >
+            <ul id="images">
+                <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+                <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+                <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+                <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            </ul>
+    </div>
+</body>
+<script>
+    // java script ke andar sara events sequentially run hote hai
+    // koi na koi activity hogi browser ke events ki
+
+    //document.getElementById('owl').onclick = function() {
+      //  alert('Owl Clicked');
+    //}
+    // Note: isme bhi dikkat hai kyunki ye features kam deta hai 
+
+    // 3) best approach
+    //document.getElementById('owl').addEventListener('click', ()=>{
+      //  alert("Owl clicked!");
+    //}, false);
+    // third parameter default false hota hai
+    // attachEvent(); purana way
+
+    // JQuery OnEventListener hota hai
+
+    // ******* Even Object ********* //
+    //document.getElementById('owl').addEventListener('click', (e)=>{
+      //  console.log(e);
+    //}, false);
+    // browser  / environment event bhi hota hai
+
+    // 1) type of events
+    // 2) time stamp
+    // 3) defatultPrevented
+    // 4) target, toElement
+    // 5) srcElement, currentTarget
+    // 6) clientX, clientY, screenX, screenY
+    // 7) altKey, ctrlKey, shiftKey, keyCode
+
+
+    //document.getElementById('images').addEventListener('click', (e)=>{
+      //  console.log("clicked inside the ul");
+    //}, false);
+/*
+    document.getElementById('owl').addEventListener('click', (e)=>{
+        console.log("owl Clicked!");
+        e.stopPropagation(); // event bubble hokar upar vale element ke upar nahi jayega
+    }, false);
+    // event propogation (bubbling)[false] [bottom ->top] from inside to outside owl -> ul
+    // capturing mode [true] [top->bottom]; (dono true kardo);
+    
+    // **** prevent default ****** /
+    document.getElementById('google').addEventListener('click', (e)=>{
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('google clicked');
+    }, false);
+
+    // Project : Image par click aur gayab ho jaye
+*/
+    document.querySelector('#images').addEventListener('click', (e)=>{
+        //console.log(e.target.parentNode); // pura li remove karna padega parent node = li
+        //let removeIt = e.target.parentNode;
+        const val = e.target.tagName;
+        console.log(val);
+        if(val === "IMG") {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode; 
+            removeIt.remove();
+
+        }
+        //removeIt.parentNode.removeChild(removeIt);
+    }, false);
+
+    
+</script>
+</html>
