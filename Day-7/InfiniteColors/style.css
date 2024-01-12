@@ -1,0 +1,23 @@
+.aTag {
+    background-color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    align-content: center;
+    color: red;
+    position: relative;
+    margin: auto;
+}
+
+.container {
+    background-color: black;
+    padding: 15px 20px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.buttons {
+    padding: 15px 20px;
+    background-color:grey;
+    display: flex;
+    border-radius: 5px;
+}

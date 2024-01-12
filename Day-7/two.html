@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC</title>
+</head>
+<body style="background-color: black; color: white">
+    <h1>Saksham Negi</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // pehla basic function setTimeout();
+    // ye ek method hai aur api ko call karta hi    
+    // setTimeout() setTimeInterval() core javascript ke part nahi 
+    // ye api deta
+
+    
+    // kitni bhi bar karu ek bar hi print hoga phir time out
+
+    // interval mein utne time ke baad vo karta rahega continuously unlike timeout
+    let val = document.querySelector('h1');
+    const sayName = ()=> {
+        val.innerHTML = 'I love God so much'
+    }
+    const zeta = setTimeout(sayName, 2000);
+    // agar beech mein rokna chahta 
+    // jaise stop daba diya toh voh change na kare ruk jaye
+     // ye use hota uss kaam ke liye
+    // clear time out
+    const uler = document.querySelector('#stop').addEventListener('click', ()=>{
+        clearTimeout(zeta);
+        console.log('Stop');
+    })
+</script>
+</html>
